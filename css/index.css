@@ -1,0 +1,559 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.apple {
+    width: 1920px;
+    height: 4845px;
+}
+
+.header {
+    width: 1920px;
+    padding: 20px 50px 71px 50px;
+    background-color: #d9d9d9, 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    /* 영역을 양쪽 끝에 붙이고 사이간격을 동일하게 지정 */
+
+
+}
+
+.header .logo {
+    margin-right: 72px;
+
+}
+
+.header .left {
+    display: flex;
+    /* 헤더 3영역중에 로고와 gnb사이가 더 가까우므로 두개 그룹지정해주기 
+    justify-content쓰면 flex써줘야함 */
+}
+
+.header .gnb {
+    /*   width: 741px; 쓰지말것*/
+    display: flex;
+    /*     margin-right: 850.75px; 쓰지말것 */
+    align-items: center;
+    font-size: 16px;
+    color: white;
+
+}
+
+.header .gnb li {
+    display: flex;
+    margin-right: 32px;
+
+}
+
+.header .util {
+    display: flex;
+    align-items: center;
+    /*     width: 106.25px; 쓰지말것 */
+
+}
+
+.header .util li {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+}
+
+.main_visual {
+    width: 1920px;
+    height: 960px;
+
+
+}
+
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+
+}
+
+.main .section {
+    height: 3011px;
+    margin: 0 50px;
+    padding-top: 110px;
+    /*     background-color: antiquewhite; */
+    justify-content: space-between;
+    /* 섹션마다 간격180되는지 확인하기 */
+}
+
+.main .section .section-01 .title {
+    margin-bottom: 46px;
+}
+
+.main .section .section-01 .title h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #767676;
+}
+
+.main .section .section-01 .list {
+    width: 1662px;
+    height: 565px;
+    display: flex;
+    margin: 0 auto 180px auto;
+    gap: 20px;
+
+
+}
+
+.main .section .section-01 .list .item {
+    position: relative;
+    /* text의 부모인 item에 relative를 써준다 */
+}
+
+.main .section .section-01 .list .item img {
+    width: 400px;
+    height: 564px;
+    object-fit: cover;
+    border-radius: 38px;
+    /*  position: relative; img와 text는 부모가 아닌 형제관계이므로 relative가 될수x*/
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.3));
+
+}
+
+.main .section .section-01 .list .item .text {
+    position: absolute;
+    top: 40px;
+    left: 24px;
+
+}
+
+.main .section .section-01 .list .item .text h3 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -2.5%;
+    color: white;
+    margin-bottom: 16px;
+
+}
+
+.main .section .section-01 .list .item .text p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #d9d9d9;
+}
+
+.main .section .section-02 {
+    margin-bottom: 180px;
+}
+
+.main .section .section-02 .title {
+    margin-bottom: 46px;
+}
+
+.main .section .section-02 .title h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #767676;
+}
+
+.main .section .section-02 .list {
+    display: flex;
+    width: 1689px;
+    height: 492px;
+    /* margin: 0 auto; */
+
+    /*     position: relative; */
+}
+
+.main .section .section-02 .list .list-left {
+    width: 800px;
+    height: 492px;
+    /*     background-color: chocolate; */
+}
+
+.main .section .section-02 .list .list-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main .section .section-02 .list .list-right {
+    display: flex;
+    align-items: center;
+    width: 889px;
+    position: relative;
+
+}
+
+.main .section .section-02 .list .list-right .swiper-slide img {
+    width: 100%;
+    height: 282px;
+    object-fit: cover;
+}
+
+
+.main .section .section-02 .list.list-right .swiper-button-next,
+.main .section .section-02 .list.list-right .swiper-rtl .swiper-button-prev {
+    background: url('../img/apple/icon/next01.png') center center / 100% no-repeat;
+    /* 위치,위치,크기,반복 */
+    right: -50px;
+    /* 슬라이드 밖으로 아이콘 이동 */
+}
+
+.main .section .section-02 .list.list-right .swiper-button-prev,
+.main .section .section-02 .list.list-right .swiper-rtl .swiper-button-next {
+    background: url('../img/apple/icon/pre01.png') center center / 100% no-repeat;
+    left: -50px;
+}
+
+.main .section .section-02 .list.list-right .swiper-button-next:after,
+.main .section .section-02 .list.list-right .swiper-button-prev:after {
+    display: none;
+    /* 원래있던 화살표 슬라이드 아이콘 보이지않게 설정 */
+}
+
+.main .section .section-02 .list.list-right .swiper {
+    position: static;
+    /* 포지션 초기화(기본값)하기, 
+    부모에 포지션:relative 주기 */
+}
+
+.main .section .section-03 {
+    margin-bottom: 180px;
+}
+
+.main .section .section-03 .title {
+    margin-bottom: 46px;
+}
+
+.main .section .section-03 .title h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #767676;
+}
+
+.main .section .section-03 .list {
+    display: flex;
+    width: 1768px;
+    height: 282px;
+    /*     background-color: aqua; */
+}
+
+.main .section .section-04 .title img {
+    width: 25px;
+    height: 30px;
+    -webkit-filter: opacity(.5) drop-shadow(0 0 0 #767676);
+    filter: opacity(.5) drop-shadow(0 0 0 #767676);
+
+}
+
+.main .section .section-04 .title h3{
+    font-size: 28px;
+    font-weight: 600;
+    color: #767676;
+}
+.main .section .section-04 .sec01-swiper{
+    width: 1914px;
+    height: 665px;
+}
+
+.main .section .section-04 .swiper-wrapper{
+    width: 100%;
+    height: 100%;
+    transform: scale(0.95);
+    opacity: 0.5;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+.main .section .section-04 .swiper-slide{
+    width: 60%;
+    height: 665px;
+    transform: scale(0.95);
+    opacity: 1;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* .main .section .section-04 .swiper-slide img {
+    width: 60%;
+    height: 665px;
+    transform: scale(0.95);
+    opacity: 0.5;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+} */
+
+
+/* .main .section .section-04 {}
+
+.main .section .section-04 .title {
+    margin-bottom: 46px;
+}
+
+.main .section .section-04 .title h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #767676;
+}
+
+
+
+.main .section .section-04 .list {
+    display: flex;
+    width: 1914px;
+    height: 665px;
+    margin-left: -125px;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+
+}
+
+.main .section .section-04 .list .item {}
+
+.main .section .section-04 .list .item:nth-child(1) img {
+    position: absolute;
+    top: 300px;
+    left: 280px;
+    z-index: 1;
+
+}
+
+.main .section .section-04 .list .item:nth-child(2) img {
+    width: 292px;
+    height: 625px;
+    border-radius: 0 48px 48px 0;
+    opacity: 0.9;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+}
+
+.main .section .section-04 .list .item:nth-child(3) img {
+    width: 1250px;
+    height: 665px;
+    border-radius: 48px;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+}
+
+.main .section .section-04 .list .item:nth-child(4) img {
+    width: 292px;
+    height: 625px;
+    border-radius: 48px 0 0 48px;
+    opacity: 0.9;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+}
+
+.main .section .section-04 .list .item:nth-child(5) img {
+    position: absolute;
+    top: 300px;
+    left: 1680px;
+    z-index: 1;
+} */
+
+
+.textline {
+    display: flex;
+    padding: 90px 0;
+    width: 1920px;
+
+}
+
+.textline .list {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.textline .list img {
+    -webkit-filter: opacity(.5) drop-shadow(0 0 0 #767676);
+    filter: opacity(.5) drop-shadow(0 0 0 #767676);
+    width: 15px;
+    height: 18px;
+}
+
+.textline .list p {
+    font-size: 16px;
+    font-weight: 400px;
+    /* 레귤러 */
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #767676;
+    /*     margin: 0 60px; */
+}
+
+.footer {
+    width: 1920px;
+    height: 670px;
+    background-color: #F5F5F5;
+    padding: 20px 335px 0 335px;
+}
+
+.footer-01 {
+    width: 1250px;
+    display: flex;
+    gap: 40px;
+
+}
+
+.footer-01 .list-01 .item:nth-child(1) {
+    margin-bottom: 16px;
+    /* 적용 안되는 것 같음  */
+}
+
+.footer-01 .list-01 .item h3 {
+    font-size: 14px;
+    font-weight: 500px;
+    /* 미듐 */
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #1b1b1b;
+    margin-bottom: 2px;
+}
+
+.footer-01 .list-01 .item li {
+    font-size: 14px;
+    font-weight: 400px;
+    /* 레귤러 */
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #767676;
+    margin-bottom: 2px;
+}
+
+.footer-01 .list-02 .item h3 {
+    font-size: 14px;
+    font-weight: 500px;
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #1b1b1b;
+    margin-bottom: 2px;
+}
+
+.footer-01 .list-02 .item li {
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #767676;
+    margin-bottom: 2px;
+}
+
+.footer-01 .list-03 .item h3 {
+    font-size: 14px;
+    font-weight: 500px;
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #1b1b1b;
+    margin-bottom: 2px;
+}
+
+.footer-01 .list-03 .item li {
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #767676;
+    margin-bottom: 2px;
+}
+
+.footer-01 .list-04 .item h3 {
+    font-size: 14px;
+    font-weight: 500px;
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #1b1b1b;
+    margin-bottom: 2px;
+}
+
+.footer-01 .list-04 .item li {
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #767676;
+    margin-bottom: 2px;
+}
+
+.footer-01 .list-05 .item h3 {
+    font-size: 14px;
+    font-weight: 500px;
+    /* 미듐 */
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #1b1b1b;
+    margin-bottom: 2px;
+}
+
+.footer-01 .list-05 .item li {
+    font-size: 14px;
+    font-weight: 400px;
+    /* 레귤러 */
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #767676;
+    margin-bottom: 2px;
+}
+
+.footer-02 p {
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #1b1b1b;
+    margin-bottom: 32px;
+}
+
+.footer-02 p a {
+    color: #1D5DFF;
+    text-decoration: underline;
+}
+
+.footer-02 .list .text .text-01 {
+    display: flex;
+}
+
+.footer-02 .list .text .text-01 p {
+    font-size: 14px;
+    font-weight: 400px;
+    /* 레귤러 */
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #1b1b1b;
+    margin-right: 30px;
+}
+
+.footer-02 .list .text .text-01 li {
+    font-size: 14px;
+    font-weight: 500px;
+    /* 미듐 */
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #1b1b1b;
+
+}
+
+.footer-02 .list .text p {
+    font-size: 14px;
+    font-weight: 400px;
+    /* 레귤러 */
+    line-height: 24px;
+    letter-spacing: -2%;
+    color: #767676;
+
+}
